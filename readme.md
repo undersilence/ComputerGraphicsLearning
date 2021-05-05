@@ -1,3 +1,3 @@
 # Computer Graphics Learning
 
-just for learning recording...
+记录自己科研生活的点滴，希望自己开心每一天吧。
