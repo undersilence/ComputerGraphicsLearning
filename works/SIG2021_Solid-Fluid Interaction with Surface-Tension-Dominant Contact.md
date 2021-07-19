@@ -55,6 +55,10 @@ $$
 \mathrm{M}_{r}\left(\mathrm{q}_{r}\right) \frac{\mathrm{d} v_{r}}{\mathrm{~d} t}=\mathrm{f}_{r}\left(\mathrm{q}_{r}, \mathrm{v}_{r}\right)
 $$
 
+## Discretization 离散化
+
++ 对于流体离散为基本的 Poisson equation
++ 对于薄膜，离散为两倍背景网格精度的三角网格，1.5x或3x也work并且不会有显著的行为差异
 
 
 
