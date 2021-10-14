@@ -30,7 +30,7 @@
 
 遵守标准不可压缩流的 纳维斯托克斯 方程
 
-![image-20210719215531545](D:\Workspace\ComputerGraphicsLearning\works\figs\navier-stokes.png)
+<img src="D:\Workspace\ComputerGraphicsLearning\works\figs\navier-stokes.png" alt="image-20210719215531545" style="zoom:25%;" />
 
 ### Surface membrane 表面薄膜
 
@@ -57,10 +57,19 @@ $$
 
 ## Discretization 离散化
 
-+ 对于流体离散为基本的 Poisson equation
-+ 对于薄膜，离散为两倍背景网格精度的三角网格，1.5x或3x也work并且不会有显著的行为差异
+### Fluid
 
+对于流体离散为基本的 Poisson equation
 
+### Membrane
+
+对于薄膜，离散为两倍背景网格精度的三角网格，1.5x或3x也work并且不会有显著的行为差异。三角网格上的每个节点都是插值的得到的具有质量的粒子，$m_{i}=\rho h \sum_{t \in N_{i}} A_{t} / 3$。
+
+<img src="D:\Workspace\ComputerGraphicsLearning\works\figs\membrane1.png" alt="image-20210720114811059" style="zoom: 25%;" />
+
+对于每个节点毛细力的计算： $f_{ci,j}={\sigma\over2}$
+
+对于每个三角形计算其毛细力
 
 ## Three-way Coupling 三路耦合
 
