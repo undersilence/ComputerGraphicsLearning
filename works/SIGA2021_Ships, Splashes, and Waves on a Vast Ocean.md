@@ -30,8 +30,22 @@ $$
 BEM 在进行水体模拟时使用三角网格模拟液体表面，通过对三角网格的顶点进行平流，会产生三角面片碰撞的情况（水滴之间的碰撞）。
 为了处理此类情况使用 LosTopos[Da et al.2014] 的一种基于网格的表面追踪方法来处理水体碰撞带来的拓扑变化。
 
+![COUPLING](figs/SSWV_2.png)
 ### FlIP influence on the BEM
 
 需要一个非入侵性的方式 non-intrusive
 
 splashes会存在于FLIP的模拟中，BEM去跟踪这些水花是无意义的，因为他们终究会合并到主水体中。
+所以我们只要求BEM去跟踪FLIP液体表面平滑过的SDF。
+
+![FLIP2BEM](figs/SSWV_3.png)
+coupling progress:
+
+### BEM Influence on the FLIP
+
+困难点在于如何去计算 BEM 网格内部的速度，如果沿用以前将网格内布体素化的方式非常低效。
+如果依靠最近邻点，则不符合物理规则。
+
+
+开尔文船波现象
+
